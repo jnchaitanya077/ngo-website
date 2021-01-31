@@ -1,12 +1,23 @@
-import React from "react";
-import ActionButton from "../components/Button";
+import React, { useEffect } from "react";
 import FullHeading from "../components/FullHeading";
 import People from "../images/image-11.jpg";
-import { cta } from "../data/Styles";
 
 function About(props) {
+
+  useEffect(() => {
+    let id = window.location.hash.slice(1);
+    console.log(id);
+    let ele = document.getElementById(id);
+    if (ele) {
+      ele.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  })
+
   return (
-    <div className="w-100 odd">
+    <div className="w-100 odd" id="about">
       <section className="container">
         <FullHeading
           title="Who Are We"
@@ -33,12 +44,6 @@ function About(props) {
                 society and make their careers successful by conducting
                 counseling sessions for needy sections on cost-free.
               </p>
-              <ActionButton
-                name="Know more"
-                url="/"
-                style={cta}
-                type="btn-sm"
-              />
             </div>
           </div>
         </div>
