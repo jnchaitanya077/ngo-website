@@ -47,8 +47,8 @@ const navItems = [
     isActive: false,
     tabTitle: "About Us",
     navList: [
-      { linkTitle: "Mission/Vision", link: "", id: 0 },
-      { linkTitle: "Our Team", link: "", id: 1 },
+      { linkTitle: "Mission/Vision", link: "/#about", id: 0 },
+      { linkTitle: "Our Team", link: "/Team", id: 1 },
       { linkTitle: "FAQs", link: "", id: 2 },
     ],
     url: ""

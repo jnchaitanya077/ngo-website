@@ -7,6 +7,7 @@ import SchemeDisplay from "./components/displayScheme";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import "./css/App.css";
+import Team from "./pages/Team";
 
 function App() {
   const { isSticky, element } = useSticky();
@@ -14,10 +15,18 @@ function App() {
     <Router>
       <Navigation sticky={isSticky} />
       <Route exact path="/" render={() => <Homepage element={element} />} />
+      <Route exact path="/about" render={() => <Homepage element={element} />} />
+
+
       <Route
         exact
         path="/Schemes"
         render={(match) => <Schemes match={match} element={element} />}
+      />
+      <Route
+        exact
+        path="/Team"
+        render={(match) => <Team match={match} element={element} />}
       />
 
       {/* Scheme Routes */}

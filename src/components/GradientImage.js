@@ -11,7 +11,7 @@ function GradientImage({ title, image }) {
     }
 
     return (
-        <div class="container-fluid text-light pt-4 shadow" style={styles}>
+        <div className="container-fluid text-light pt-4 shadow" style={styles}>
             <div className="container">
                 <div className="col-xl-8">
                     <h1>{title}</h1>
