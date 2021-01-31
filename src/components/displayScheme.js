@@ -9,7 +9,6 @@ import Button from "./Button";
 import { cta } from "../data/Styles"
 
 
-import FullImage from "./FullImage";
 import Stats from "./Stats";
 import ImageCard from "./ImageCard";
 
@@ -19,7 +18,7 @@ function DisplayScheme({ element }) {
   const {
     params: { schemeId },
   } = match;
-  // console.log(schemeId);
+  console.log(schemeId);
 
   const [isLoading, Loading] = useState(true);
   const [data, setData] = useState();
@@ -38,6 +37,7 @@ function DisplayScheme({ element }) {
     "Loading.."
   ) : data ? (<>
     <GradientImage title={schemeId} image={data.image} />
+    {console.log("inside")}
     <div className="container">
 
       <div className="row">
@@ -69,8 +69,7 @@ function DisplayScheme({ element }) {
       <h3>Other Schemes</h3>
       <div className="row row-cols-1 row-cols-md-4">
         {otherSchemes.map((t) => <div>
-          <ImageCard image={t.image} title={t.title} link={`/Schemes/${t.title}`} />
-          {/* <FullImage schemeDetails={t} /> */}
+          <ImageCard key={uuidv4()} image={t.image} title={t.title} link={`/Schemes/${t.title}`} />
         </div>)}
       </div>
     </div>
