@@ -21,7 +21,7 @@ function Faq(props) {
           })}
         </div>
         <div className="mt-md-4 mt-3">
-          <ActionButton name="Read more" url="/" style={cta} type="btn-sm" />
+          <ActionButton name="Read more" url="/Faq" style={cta} type="btn-sm" />
         </div>
       </section>
     </div>

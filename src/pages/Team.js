@@ -14,7 +14,7 @@ function Team({ element }) {
                         key={eachTeam.id}
                         title={eachTeam.title}
                         content={eachTeam.content}
-                        url={eachTeam.url}
+                        url={eachTeam.url + "Team/" + eachTeam.title}
                         buttonName={eachTeam.buttonName}
                         type={eachTeam.type}
                     />)}

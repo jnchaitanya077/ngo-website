@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import "./css/App.css";
 import Team from "./pages/Team";
+import AboutTeam from "./pages/AboutTeam";
+import FaqDispaly from "./pages/Faq";
 
 function App() {
   const { isSticky, element } = useSticky();
@@ -28,11 +30,21 @@ function App() {
         path="/Team"
         render={(match) => <Team match={match} element={element} />}
       />
+      <Route
+        exact
+        path="/Faq"
+        render={() => <FaqDispaly element={element} />}
+      />
 
       {/* Scheme Routes */}
       <Route
         path="/Schemes/:schemeId"
         render={() => <SchemeDisplay element={element} />}
+      />
+      {/* Team Routes */}
+      <Route
+        path="/Team/:TeamId"
+        render={() => <AboutTeam element={element} />}
       />
       <Footer />
     </Router>

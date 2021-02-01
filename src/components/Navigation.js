@@ -49,7 +49,7 @@ const navItems = [
     navList: [
       { linkTitle: "Mission/Vision", link: "/#about", id: 0 },
       { linkTitle: "Our Team", link: "/Team", id: 1 },
-      { linkTitle: "FAQs", link: "", id: 2 },
+      { linkTitle: "FAQs", link: "/Faq", id: 2 },
     ],
     url: ""
   },
