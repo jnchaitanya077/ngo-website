@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/ngo-website/static/css/main.f37d7588.chunk.css",
+    "main.js": "/ngo-website/static/js/main.eff9eabd.chunk.js",
+    "main.js.map": "/ngo-website/static/js/main.eff9eabd.chunk.js.map",
+    "runtime-main.js": "/ngo-website/static/js/runtime-main.d050e22d.js",
+    "runtime-main.js.map": "/ngo-website/static/js/runtime-main.d050e22d.js.map",
+    "static/css/2.e70faa38.chunk.css": "/ngo-website/static/css/2.e70faa38.chunk.css",
+    "static/js/2.63ff7b7a.chunk.js": "/ngo-website/static/js/2.63ff7b7a.chunk.js",
+    "static/js/2.63ff7b7a.chunk.js.map": "/ngo-website/static/js/2.63ff7b7a.chunk.js.map",
+    "index.html": "/ngo-website/index.html",
+    "static/css/2.e70faa38.chunk.css.map": "/ngo-website/static/css/2.e70faa38.chunk.css.map",
+    "static/css/main.f37d7588.chunk.css.map": "/ngo-website/static/css/main.f37d7588.chunk.css.map",
+    "static/js/2.63ff7b7a.chunk.js.LICENSE.txt": "/ngo-website/static/js/2.63ff7b7a.chunk.js.LICENSE.txt",
+    "static/media/army.90e19bcf.jpg": "/ngo-website/static/media/army.90e19bcf.jpg",
+    "static/media/App.css": "/ngo-website/static/media/children.f521a006.jpg",
+    "static/media/drinking-water.fd42250d.jpg": "/ngo-website/static/media/drinking-water.fd42250d.jpg",
+    "static/media/education.305d6c2f.jpg": "/ngo-website/static/media/education.305d6c2f.jpg",
+    "static/media/image-11.9692630a.jpg": "/ngo-website/static/media/image-11.9692630a.jpg",
+    "static/media/impact.1a0174c6.jpg": "/ngo-website/static/media/impact.1a0174c6.jpg",
+    "static/media/miniature-art.e05d1ead.jpg": "/ngo-website/static/media/miniature-art.e05d1ead.jpg",
+    "static/media/rain-harvesting.1350459e.jpg": "/ngo-website/static/media/rain-harvesting.1350459e.jpg",
+    "static/media/report.6f42bad1.jpg": "/ngo-website/static/media/report.6f42bad1.jpg",
+    "static/media/styles.css": "/ngo-website/static/media/revicons.e8746a62.woff",
+    "static/media/self-defence.7724ca5c.jpg": "/ngo-website/static/media/self-defence.7724ca5c.jpg",
+    "static/media/solar-power.f822f0b4.jpg": "/ngo-website/static/media/solar-power.f822f0b4.jpg",
+    "static/media/Newsletter.css": "/ngo-website/static/media/subscribe-bg.fe22fc58.jpg",
+    "static/media/talent.dbbaafff.jpg": "/ngo-website/static/media/talent.dbbaafff.jpg",
+    "static/media/team.5227a8ae.jpg": "/ngo-website/static/media/team.5227a8ae.jpg",
+    "static/media/women-with-child.c236232e.jpg": "/ngo-website/static/media/women-with-child.c236232e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d050e22d.js",
+    "static/css/2.e70faa38.chunk.css",
+    "static/js/2.63ff7b7a.chunk.js",
+    "static/css/main.f37d7588.chunk.css",
+    "static/js/main.eff9eabd.chunk.js"
+  ]
+}
