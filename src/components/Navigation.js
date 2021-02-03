@@ -116,7 +116,7 @@ const navItems = [
     isActive: false,
     tabTitle: "Finance",
     navList: [
-      { linkTitle: "Annual Reports", link: "", id: 0 },
+      { linkTitle: "Annual Reports", link: "/AnnualReports", id: 0 },
       { linkTitle: "Donar Details", link: "", id: 1 },
     ],
     url: ""

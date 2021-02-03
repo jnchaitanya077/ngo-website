@@ -6,8 +6,8 @@ function TeamCard({ buttonName, url, type, title, content }) {
     return (
         <div className=" col-xl-4 d-flex mb-3 ">
             <div className="card p-4 align-self-stretch ">
-                <h3>{title}</h3>
-                <p>
+                <h5 className="text-center">{title}</h5>
+                <p className="text-center">
                     {content}
                 </p>
                 <div

@@ -10,6 +10,7 @@ import "./css/App.css";
 import Team from "./pages/Team";
 import AboutTeam from "./pages/AboutTeam";
 import FaqDispaly from "./pages/Faq";
+import AnnualReports from "./pages/AnnualReports";
 
 function App() {
   const { isSticky, element } = useSticky();
@@ -18,8 +19,6 @@ function App() {
       <Navigation sticky={isSticky} />
       <Route exact path="/" render={() => <Homepage element={element} />} />
       <Route exact path="/about" render={() => <Homepage element={element} />} />
-
-
       <Route
         exact
         path="/Schemes"
@@ -34,6 +33,11 @@ function App() {
         exact
         path="/Faq"
         render={() => <FaqDispaly element={element} />}
+      />
+      <Route
+        exact
+        path="/AnnualReports"
+        render={() => <AnnualReports element={element} />}
       />
 
       {/* Scheme Routes */}

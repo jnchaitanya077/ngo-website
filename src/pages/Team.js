@@ -2,7 +2,7 @@ import React from 'react';
 import GradientImage from '../components/GradientImage';
 import TeamCard from '../components/TeamCard';
 import Waypoint from '../components/Waypoint';
-import Image from "../images/original/army.jpg"
+import Image from "../images/team.jpg"
 function Team({ element }) {
     return (
         <>

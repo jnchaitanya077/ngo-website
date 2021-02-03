@@ -5,10 +5,10 @@ function Collapse({ question, answer, id }) {
     console.log(id);
     return (
         <>
-            <div className="w-100 mt-3 mb-3" style={{ backgroundColor: "#ace6ac" }}>
+            <div className="w-100 mt-3 mb-3" style={{ backgroundColor: "#e2e2e2" }}>
                 <div className="row">
                     <div className="col-10">
-                        <h5 >{question}</h5>
+                        <h5 className="ps-2 pt-1">{question}</h5>
                     </div>
                     <div className="col-2">
                         <button
@@ -16,19 +16,19 @@ function Collapse({ question, answer, id }) {
                             data-bs-toggle="collapse"
                             data-bs-target={`#${id}`}
                             className="btn float-end "
-                            style={{ backgroundColor: "#CF63CF" }}
+                            style={{ backgroundColor: "#5add5f" }}
                             aria-expanded="false"
                             aria-controls="collapseExample"
                             onClick={() => {
                                 setClick(!isClicked);
                             }}
                         >
-                            {isClicked ? "-" : "+"}
+                            {isClicked ? <h5 className="text-light">-</h5> : <h5 className="text-light">+</h5>}
                         </button>
                     </div>
                 </div>
-                <div class="collapse" id={`${id}`}>
-                    <div class="w-100 mt-3">
+                <div className="collapse" id={`${id}`}>
+                    <div className="w-100 mt-3 ps-2 pb-2">
                         {answer}
                     </div>
                 </div>
