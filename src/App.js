@@ -11,14 +11,20 @@ import Team from "./pages/Team";
 import AboutTeam from "./pages/AboutTeam";
 import FaqDispaly from "./pages/Faq";
 import AnnualReports from "./pages/AnnualReports";
+import About from "./pages/About";
 
 function App() {
   const { isSticky, element } = useSticky();
   return (
     <Router>
       <Navigation sticky={isSticky} />
+      {/* for github pages */}
+      <Route exact path="/ngo-website/" render={() => <Homepage element={element} />} />
+
       <Route exact path="/" render={() => <Homepage element={element} />} />
-      <Route exact path="/about" render={() => <Homepage element={element} />} />
+
+      <Route exact path="/About" render={() => <About element={element} />} />
+
       <Route
         exact
         path="/Schemes"

@@ -1,20 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import FullHeading from "../components/FullHeading";
 import People from "../images/image-11.jpg";
 
 function About(props) {
 
-  useEffect(() => {
-    let id = window.location.hash.slice(1);
-    console.log(id);
-    let ele = document.getElementById(id);
-    if (ele) {
-      ele.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  })
+  // useEffect(() => {
+  //   let id = window.location.hash.slice(1);
+  //   console.log(id);
+  //   let ele = document.getElementById(id);
+  //   if (ele) {
+  //     ele.scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "start",
+  //     })
+  //   }
+  // })
 
   return (
     <div className="w-100 odd" id="about">
