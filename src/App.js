@@ -12,6 +12,7 @@ import AboutTeam from "./pages/AboutTeam";
 import FaqDispaly from "./pages/Faq";
 import AnnualReports from "./pages/AnnualReports";
 import About from "./pages/About";
+import DonarDetails from "./pages/DonarDetails";
 
 function App() {
   const { isSticky, element } = useSticky();
@@ -44,6 +45,12 @@ function App() {
         exact
         path="/AnnualReports"
         render={() => <AnnualReports element={element} />}
+      />
+
+      <Route
+        exact
+        path="/DonarDetails"
+        render={() => <DonarDetails element={element} />}
       />
 
       {/* Scheme Routes */}
