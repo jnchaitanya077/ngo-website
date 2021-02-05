@@ -9,13 +9,13 @@ import 'react-image-lightbox/style.css';
 import AwardsImage from "../images/children.jpg"
 
 function CashAwards({ element }) {
-    // const [photo, setPhoto] = useState({
-    //     photoIndex: 0,
-    //     isOpen: false
-    // })
-    // function onSelect(params) {
+    const [photo, setPhoto] = useState({
+        photoIndex: 0,
+        isOpen: false
+    })
+    function onSelect(params) {
 
-    // }
+    }
     return (
         <div className="container odd">
             <Waypoint element={element} />
