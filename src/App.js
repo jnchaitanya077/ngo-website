@@ -13,6 +13,7 @@ import FaqDispaly from "./pages/Faq";
 import AnnualReports from "./pages/AnnualReports";
 import About from "./pages/About";
 import DonarDetails from "./pages/DonarDetails";
+import CashAwards from "./pages/CashAwards";
 
 function App() {
   const { isSticky, element } = useSticky();
@@ -51,6 +52,14 @@ function App() {
         exact
         path="/DonarDetails"
         render={() => <DonarDetails element={element} />}
+      />
+
+      {/* Scholorships */}
+
+      <Route
+        exact
+        path="/CashAwards"
+        render={() => <CashAwards element={element} />}
       />
 
       {/* Scheme Routes */}

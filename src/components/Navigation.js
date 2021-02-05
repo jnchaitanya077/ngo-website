@@ -104,7 +104,7 @@ const navItems = [
     isActive: false,
     tabTitle: "Scholarships",
     navList: [
-      { linkTitle: "Cash Awards", link: "", id: 0 },
+      { linkTitle: "Cash Awards", link: "/CashAwards", id: 0 },
       { linkTitle: "Student Scholorships", link: "", id: 1 },
       { linkTitle: "Medals", link: "", id: 2 },
       { linkTitle: "Certificates", link: "", id: 3 },
