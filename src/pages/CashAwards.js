@@ -3,19 +3,19 @@ import AwardsCard from '../components/AwardsCard';
 import FullHeading from '../components/FullHeading';
 import Waypoint from '../components/Waypoint';
 // import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+// import 'react-image-lightbox/style.css';
 
 // images
 import AwardsImage from "../images/children.jpg"
 
 function CashAwards({ element }) {
-    const [photo, setPhoto] = useState({
-        photoIndex: 0,
-        isOpen: false
-    })
-    function onSelect(params) {
+    // const [photo, setPhoto] = useState({
+    //     photoIndex: 0,
+    //     isOpen: false
+    // })
+    // function onSelect(params) {
 
-    }
+    // }
     return (
         <div className="container odd">
             <Waypoint element={element} />
@@ -29,7 +29,9 @@ function CashAwards({ element }) {
                             name={detail.name}
                             event={detail.event}
                             amount={detail.amount}
-                            onSelect={onSelect} />
+                        // onSelect={onSelect} 
+
+                        />
                     </div>)}
             </div>
         </div>
