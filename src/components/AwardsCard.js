@@ -1,10 +1,13 @@
 import React from 'react';
 
 
-function AwardsCard({ image, name, event, amount }) {
+function AwardsCard({ image, name, event, amount, id, onSelect }) {
+    function handleClick() {
+        onSelect(id);
+    }
     return (
         <div className="row">
-            <div className="col-md-12 col-xl-6">
+            <div className="col-md-12 col-xl-6" onClick={handleClick}>
                 <img src={image} alt="aboutUSImage" className="img-fluid" />
             </div>
             <div className="col-md-12 col-xl-6">
