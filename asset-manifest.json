@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/ngo-website/static/css/main.f37d7588.chunk.css",
-    "main.js": "/ngo-website/static/js/main.9356fa69.chunk.js",
-    "main.js.map": "/ngo-website/static/js/main.9356fa69.chunk.js.map",
+    "main.js": "/ngo-website/static/js/main.c646c328.chunk.js",
+    "main.js.map": "/ngo-website/static/js/main.c646c328.chunk.js.map",
     "runtime-main.js": "/ngo-website/static/js/runtime-main.d050e22d.js",
     "runtime-main.js.map": "/ngo-website/static/js/runtime-main.d050e22d.js.map",
     "static/css/2.e70faa38.chunk.css": "/ngo-website/static/css/2.e70faa38.chunk.css",
-    "static/js/2.63ff7b7a.chunk.js": "/ngo-website/static/js/2.63ff7b7a.chunk.js",
-    "static/js/2.63ff7b7a.chunk.js.map": "/ngo-website/static/js/2.63ff7b7a.chunk.js.map",
+    "static/js/2.dabc79ea.chunk.js": "/ngo-website/static/js/2.dabc79ea.chunk.js",
+    "static/js/2.dabc79ea.chunk.js.map": "/ngo-website/static/js/2.dabc79ea.chunk.js.map",
     "index.html": "/ngo-website/index.html",
     "static/css/2.e70faa38.chunk.css.map": "/ngo-website/static/css/2.e70faa38.chunk.css.map",
     "static/css/main.f37d7588.chunk.css.map": "/ngo-website/static/css/main.f37d7588.chunk.css.map",
-    "static/js/2.63ff7b7a.chunk.js.LICENSE.txt": "/ngo-website/static/js/2.63ff7b7a.chunk.js.LICENSE.txt",
+    "static/js/2.dabc79ea.chunk.js.LICENSE.txt": "/ngo-website/static/js/2.dabc79ea.chunk.js.LICENSE.txt",
     "static/media/army.90e19bcf.jpg": "/ngo-website/static/media/army.90e19bcf.jpg",
     "static/media/App.css": "/ngo-website/static/media/children.f521a006.jpg",
     "static/media/drinking-water.fd42250d.jpg": "/ngo-website/static/media/drinking-water.fd42250d.jpg",
@@ -32,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.d050e22d.js",
     "static/css/2.e70faa38.chunk.css",
-    "static/js/2.63ff7b7a.chunk.js",
+    "static/js/2.dabc79ea.chunk.js",
     "static/css/main.f37d7588.chunk.css",
-    "static/js/main.9356fa69.chunk.js"
+    "static/js/main.c646c328.chunk.js"
   ]
 }
