@@ -15,7 +15,7 @@ export default function Navigation({ sticky }) {
           : "navbar navbar-light navbar-expand-xxl"
       }
     >
-      <img src = {Logo} width = "75" height = "75"></img>
+      <img src={Logo} width="75" height="75" alt="logo" />
       <Link className="navbar-brand" to="/">
         Samagra Foundation
       </Link>
