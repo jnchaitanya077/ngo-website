@@ -4,6 +4,7 @@ import NavList from "./NavList";
 import { Link } from "react-router-dom";
 import { donate, stickyNavBar } from "../data/Styles";
 import "../css/navigation.css";
+import Logo from "../images/24.png"
 
 export default function Navigation({ sticky }) {
   return (
@@ -14,6 +15,7 @@ export default function Navigation({ sticky }) {
           : "navbar navbar-light navbar-expand-xxl"
       }
     >
+      <img src = {Logo} width = "75" height = "75"></img>
       <Link className="navbar-brand" to="/">
         Samagra Foundation
       </Link>
