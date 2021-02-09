@@ -41,14 +41,14 @@ function CashAwards({ element }) {
 
                 {photo.isOpen && <Lightbox
                     mainSrc={AwardImages[photo.photoIndex].image}
-                    nextSrc={AwardImages[(photo.photoIndex + 1) % AwardImages.length].image
-                    }
-                    prevSrc={AwardImages[(photo.photoIndex + AwardImages.length - 1) % AwardImages.length].image}
-                    onMovePrevRequest={() => setPhoto({
-                        ...photo,
-                        photoIndex: (photo.photoIndex + AwardImages.length - 1) % images.length,
-                    })
-                    }
+                    // nextSrc={AwardImages[(photo.photoIndex + 1) % AwardImages.length].image
+                    // }
+                    // prevSrc={AwardImages[(photo.photoIndex + AwardImages.length - 1) % AwardImages.length].image}
+                    // onMovePrevRequest={() => setPhoto({
+                    //     ...photo,
+                    //     photoIndex: (photo.photoIndex + AwardImages.length - 1) % AwardImages.length,
+                    // })
+                    // }
                     onCloseRequest={() => setPhoto({ ...photo, isOpen: false })}
                 />}
             </div>
