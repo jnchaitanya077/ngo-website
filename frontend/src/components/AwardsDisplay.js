@@ -26,7 +26,7 @@ function AwardsDisplay({ element, title, awardDetails, info }) {
             </div>
             <div className="row">
                 {awardDetails.map((awardDetail) =>
-                    <div className="col-md-6 mb-2">
+                    <div className="col-md-6 mb-2" style={{ cursor: "zoom-in" }}>
                         <AwardsCard
                             id={awardDetail.id}
                             image={awardDetail.image}
@@ -44,7 +44,6 @@ function AwardsDisplay({ element, title, awardDetails, info }) {
                     })}
                 />}
             </div>
-
         </div>
     );
 }
