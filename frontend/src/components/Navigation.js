@@ -131,7 +131,7 @@ const navItems = [
       { linkTitle: "Print Media", link: "", id: 0 },
       { linkTitle: "Electronic Media", link: "", id: 1 },
       { linkTitle: "Social Media", link: "", id: 2 },
-      { linkTitle: "Gallery", link: "", id: 3 },
+      { linkTitle: "Gallery", link: "/Gallery", id: 3 },
       { linkTitle: "Video Interview", link: "", id: 4 },
     ],
     url: ""

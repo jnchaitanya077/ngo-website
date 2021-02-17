@@ -16,6 +16,7 @@ import DonarDetails from "./pages/DonarDetails";
 import CashAwards from "./pages/CashAwards";
 import StudentScholarships from "./pages/StudentScholarships"
 import Medals from "./pages/Medals"
+import Gallery from "./pages/Gallery"
 
 function App() {
   const { isSticky, element } = useSticky();
@@ -73,6 +74,19 @@ function App() {
         path="/Medals"
         render={() => <Medals element={element} />}
       />
+
+      {/* Gallery Routes */}
+      <Route
+        exact
+        path="/Gallery"
+        render={() => <Gallery element={element} />}
+      />
+      <Route
+        path="/Gallery/:galleryId"
+        render={() => <Gallery element={element} />}
+      />
+
+
 
       {/* Scheme Routes */}
       <Route
