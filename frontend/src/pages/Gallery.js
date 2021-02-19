@@ -4,7 +4,7 @@ import FullHeading from '../components/FullHeading';
 import Image from '../components/Image';
 import Waypoint from '../components/Waypoint';
 
-
+import image from "../images/education.jpg"
 function Gallery({ element }) {
     return (
         <div className="container mt-3">
@@ -14,48 +14,13 @@ function Gallery({ element }) {
                 {info}
             </div>
             <div className="row">
-                <div className="col-12 col-md-4 col-xxl-3 mb-3 ">
-                    <Image text="simple text" />
-                    <Link>
-                        <h6 className="text-center">Hello</h6>
-                    </Link>
-                </div>
-                <div className="col-12 col-md-4 col-xxl-3 mb-3">
-                    <Image text="simple text" />
-                    <Link>
-                        <h6 className="text-center">Hello</h6>
-                    </Link>
-                </div>
-                <div className="col-12 col-md-4 col-xxl-3 mb-3">
-                    <Image text="simple text" />
-                    <Link>
-                        <h6 className="text-center">Hello</h6>
-                    </Link>
-                </div>
-                <div className="col-12 col-md-4 col-xxl-3 mb-3">
-                    <Image text="simple text" />
-                    <Link>
-                        <h6 className="text-center">Hello</h6>
-                    </Link>
-                </div>
-                <div className="col-12 col-md-4 col-xxl-3 mb-3">
-                    <Image text="simple text" />
-                    <Link>
-                        <h6 className="text-center">Hello</h6>
-                    </Link>
-                </div>
-                <div className="col-12 col-md-4 col-xxl-3 mb-3">
-                    <Image text="simple text" />
-                    <Link>
-                        <h6 className="text-center">Hello</h6>
-                    </Link>
-                </div>
-                <div className="col-12 col-md-4 col-xxl-3 mb-3">
-                    <Image text="simple text" />
-                    <Link>
-                        <h6 className="text-center">Hello</h6>
-                    </Link>
-                </div>
+                {albums.map((album) =>
+                    <div key={album.albumId} className="col-12 col-md-4 col-xxl-3 mb-3 ">
+                        <Image image={album.image} text={album.overlayText} />
+                        <Link>
+                            <h6 className="text-center">{album.eventTitle}</h6>
+                        </Link>
+                    </div>)}
             </div>
         </div>
     );
@@ -63,19 +28,44 @@ function Gallery({ element }) {
 
 export default Gallery;
 
-const images = [
+const albums = [
     {
-        original: 'https://picsum.photos/id/1018/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1018/250/150/',
+        albumId: 1,
+        eventTitle: "Sample Title",
+        overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        image: image
     },
     {
-        original: 'https://picsum.photos/id/1015/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1015/250/150/',
+        albumId: 2,
+        eventTitle: "Sample Title",
+        overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        image: image
     },
     {
-        original: 'https://picsum.photos/id/1019/1000/600/',
-        thumbnail: 'https://picsum.photos/id/1019/250/150/',
+        albumId: 3,
+        eventTitle: "Sample Title",
+        overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        image: image
     },
+    {
+        albumId: 4,
+        eventTitle: "Sample Title",
+        overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        image: image
+    },
+    {
+        albumId: 5,
+        eventTitle: "Sample Title",
+        overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        image: image
+    },
+    {
+        albumId: 6,
+        eventTitle: "Sample Title",
+        overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        image: image
+    },
+
 ];
 
 const info = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"

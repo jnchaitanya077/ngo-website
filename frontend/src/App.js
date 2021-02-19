@@ -82,7 +82,7 @@ function App() {
         render={() => <Gallery element={element} />}
       />
       <Route
-        path="/Gallery/:galleryId"
+        path="/Gallery/:albumId"
         render={() => <Gallery element={element} />}
       />
 
