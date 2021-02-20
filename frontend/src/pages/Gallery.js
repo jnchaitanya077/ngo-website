@@ -5,7 +5,11 @@ import Image from '../components/Image';
 import Waypoint from '../components/Waypoint';
 
 import image from "../images/education.jpg"
-function Gallery({ element }) {
+function Gallery({ element, onAblumSelectSendPhotos }) {
+    const onAblumSelect = (photos) => {
+        onAblumSelectSendPhotos(photos)
+    }
+
     return (
         <div className="container mt-3">
             <Waypoint element={element} />
@@ -15,9 +19,10 @@ function Gallery({ element }) {
             </div>
             <div className="row">
                 {albums.map((album) =>
-                    <div key={album.albumId} className="col-12 col-md-4 col-xxl-3 mb-3 ">
-                        <Image image={album.image} text={album.overlayText} />
-                        <Link>
+                    <div key={album.albumId} className="col-12 col-md-4 col-xxl-3 mb-3"
+                        onClick={() => onAblumSelect(album.photos)}>
+                        <Image image={album.thumbnail} text={album.overlayText} />
+                        <Link to={`/Gallery/${album.eventTitle}`}>
                             <h6 className="text-center">{album.eventTitle}</h6>
                         </Link>
                     </div>)}
@@ -27,43 +32,51 @@ function Gallery({ element }) {
 }
 
 export default Gallery;
+// to={`/Gallery/${album.eventTitle}`}
 
 const albums = [
     {
         albumId: 1,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        image: image
+        thumbnail: image,
+        photos: [image, image, image, image, image]
+
     },
     {
         albumId: 2,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        image: image
+        thumbnail: image,
+        photos: [image, image, image, image, image]
     },
     {
         albumId: 3,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        image: image
+        thumbnail: image,
+        photos: [image, image, image, image, image]
     },
     {
         albumId: 4,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        image: image
+        thumbnail: image,
+        photos: [image, image, image, image, image]
     },
     {
         albumId: 5,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        image: image
+        thumbnail: image,
+        photos: [image, image, image, image, image]
     },
     {
         albumId: 6,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        image: image
+        thumbnail: image,
+        photos: [image, image, image, image, image]
     },
 
 ];

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import useSticky from "./hooks/useSticky";
 import Homepage from "./pages/Homepage";
@@ -17,9 +17,18 @@ import CashAwards from "./pages/CashAwards";
 import StudentScholarships from "./pages/StudentScholarships"
 import Medals from "./pages/Medals"
 import Gallery from "./pages/Gallery"
+import GalleryDisplay from "./components/GalleryDisplay";
 
 function App() {
   const { isSticky, element } = useSticky();
+  // Gallery state
+  const [albumPhotos, setAlbumPhotos] = useState([]);
+
+  function setAlbum(photos) {
+    // console.log(photos)
+    setAlbumPhotos(photos);
+    console.log(albumPhotos)
+  }
   return (
     <Router>
       <Navigation sticky={isSticky} />
@@ -79,11 +88,14 @@ function App() {
       <Route
         exact
         path="/Gallery"
-        render={() => <Gallery element={element} />}
+        render={() => <Gallery element={element} onAblumSelectSendPhotos={setAlbum} />}
       />
       <Route
-        path="/Gallery/:albumId"
-        render={() => <Gallery element={element} />}
+        path="/Gallery/:albumTitle"
+        render={() =>
+          <GalleryDisplay
+            element={element}
+            albumPhotos={albumPhotos} />}
       />
 
 
@@ -95,7 +107,7 @@ function App() {
       />
       {/* Team Routes */}
       <Route
-        path="/Team/:TeamId"
+        path="/Team/:teamId"
         render={() => <AboutTeam element={element} />}
       />
       <Footer />
