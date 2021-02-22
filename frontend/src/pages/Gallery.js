@@ -40,7 +40,13 @@ const albums = [
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: image,
-        photos: [image, image, image, image, image]
+        photos: [
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" }]
 
     },
     {
@@ -48,35 +54,65 @@ const albums = [
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: image,
-        photos: [image, image, image, image, image]
+        photos: [
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" }]
     },
     {
         albumId: 3,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: image,
-        photos: [image, image, image, image, image]
+        photos: [
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" }]
     },
     {
         albumId: 4,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: image,
-        photos: [image, image, image, image, image]
+        photos: [
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" }]
     },
     {
         albumId: 5,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: image,
-        photos: [image, image, image, image, image]
+        photos: [
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" }]
     },
     {
         albumId: 6,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: image,
-        photos: [image, image, image, image, image]
+        photos: [
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" },
+            { url: image, type: "photo", altTag: "photo" }]
     },
 
 ];

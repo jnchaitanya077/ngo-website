@@ -11,7 +11,7 @@ import Scheme8 from "../images/women-with-child.jpg";
 const SchemesDetails = [
   {
     id: 0,
-    image: Scheme1,
+    image: "/images/schemes/education.jpg",
     overlayText:
       "In the coming years, our country will become one of the 'Developed Nations'. Which we need help for.",
     title: "Bharatiya Balavikas Yojana",
@@ -48,10 +48,11 @@ const SchemesDetails = [
         },
       ],
     },
+    stats: { id: 0, fundsCollected: 67894, peopleBenefited: 567, moneySpent: 567890 }
   },
   {
     id: 1,
-    image: Scheme2,
+    image: "/images/schemes/self-defence.jpg",
     overlayText:
       "It will not only train in the process of self-defense, but will also help educate women in terms of safety.",
     title: "Bharatiya Naari Shakti Yojana",
@@ -76,10 +77,11 @@ const SchemesDetails = [
         },
       ],
     },
+    stats: { id: 0, fundsCollected: 67894, peopleBenefited: 567, moneySpent: 567890 },
   },
   {
     id: 2,
-    image: Scheme3,
+    image: "/images/schemes/drinking-water.jpg",
     overlayText:
       "Support to create water purification awareness camps to create a healthier nation from the level of the village to the level of urban citizens.",
     title: "Bharatiya Jaldhar Yojana",
@@ -96,10 +98,11 @@ const SchemesDetails = [
         },
       ],
     },
+    stats: { id: 0, fundsCollected: 67894, peopleBenefited: 567, moneySpent: 567890 },
   },
   {
     id: 3,
-    image: Scheme4,
+    image: "/images/schemes/solar-power.jpg",
     overlayText:
       "Power generation become challenge for our nation, for which we are relying on water resources our existence becomes difficult. In this situation, now we should think of alternate Renewable Energy.",
     title: "Bharatiya Suraj Bijili Yojana",
@@ -116,10 +119,11 @@ const SchemesDetails = [
         },
       ],
     },
+    stats: { id: 0, fundsCollected: 67894, peopleBenefited: 567, moneySpent: 567890 },
   },
   {
     id: 4,
-    image: Scheme5,
+    image: "/images/schemes/rain-harvesting.jpg",
     overlayText:
       "78% of the Rain water flows to the oceans each year. India is such a bigger country with many reservoirs of water, projects, rivers, bodies of water etc. But still we face many problems during the summer.",
     title: "Bharatiya Varshjal Sanchayan Yojana",
@@ -144,10 +148,11 @@ const SchemesDetails = [
         },
       ],
     },
+    stats: { id: 0, fundsCollected: 67894, peopleBenefited: 567, moneySpent: 567890 },
   },
   {
     id: 5,
-    image: Scheme6,
+    image: "/images/schemes/army.jpg",
     overlayText:
       "Promoting NCC for students from school and college, etc., would build interest in serving their country.",
     title: "Bharatiya Rakshak Yuva Sena",
@@ -172,10 +177,11 @@ const SchemesDetails = [
         },
       ],
     },
+    stats: { id: 0, fundsCollected: 67894, peopleBenefited: 567, moneySpent: 567890 },
   },
   {
     id: 6,
-    image: Scheme7,
+    image: "/images/schemes/miniature-art.jpg",
     overlayText:
       "Identifying and explore talented young people in various activities and encourage them to become our country's glory and make them accessible to the world.",
     title: "Grameen kalabharati Yojana",
@@ -192,10 +198,11 @@ const SchemesDetails = [
         },
       ],
     },
+    stats: { id: 0, fundsCollected: 67894, peopleBenefited: 567, moneySpent: 567890 },
   },
   {
     id: 7,
-    image: Scheme8,
+    image: "/images/schemes/women-with-child.jpg",
     overlayText:
       "Creating awareness campaigns for pregnant women in district head quarters and mandal head quarters on their health",
     title: "Matha Shishu Samrakshana Yojana",
@@ -213,6 +220,7 @@ const SchemesDetails = [
         },
       ],
     },
+    stats: { id: 0, fundsCollected: 67894, peopleBenefited: 567, moneySpent: 567890 }
   },
 ];
 

@@ -7,10 +7,10 @@ import { v4 as uuidv4 } from 'uuid';
 import GradientImage from "./GradientImage";
 import Button from "./Button";
 import { cta } from "../data/Styles"
-
-
 import Stats from "./Stats";
 import ImageCard from "./ImageCard";
+import axios from 'axios';
+import { uniqueId } from "lodash";
 
 
 function DisplayScheme({ element }) {
@@ -18,28 +18,41 @@ function DisplayScheme({ element }) {
   const {
     params: { schemeId },
   } = match;
-  console.log(schemeId);
+  const [data, setData] = useState({});
+  const [otherSchemes, setSchemes] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
-  const [isLoading, Loading] = useState(true);
-  const [data, setData] = useState();
-  const [otherSchemes, setSchemes] = useState();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    // Find the Scheme based on its title and set the state.
-    var e = SchemesDetails.find((scheme) => scheme.title === schemeId);
-    setData(e);
-    setSchemes(SchemesDetails.filter((eachScheme) => eachScheme.title !== e.title));
-    Loading(!Loading);
+    // Fetch data.
+    const headers = {
+      'Content-Type': 'application/json'
+    }
+    axios.get("http://localhost:6098/loadSchemes", { headers })
+      .then(function (response) {
+        findScheme(response.data)
+        filterSchemes(response.data)
+        setLoading(false)
+      })
+      .catch(err => console.log(err))
   }, [schemeId]);
+
+  function findScheme(response) {
+    const result = response.find((scheme) => scheme.title == schemeId)
+    setData(result);
+  }
+
+  function filterSchemes(response) {
+    const result = response.filter((eachScheme) => eachScheme.title !== data.title)
+    setSchemes(result)
+  }
 
   return isLoading ? (
     "Loading.."
   ) : data ? (<>
-    <GradientImage title={schemeId} image={data.image} />
-    {console.log("inside")}
+    <GradientImage title={schemeId} image={`http://localhost:6098${data.image}`} />
     <div className="container">
-
       <div className="row">
         <div className="col-xl-8">
           <Waypoint element={element} />
@@ -50,7 +63,7 @@ function DisplayScheme({ element }) {
             <h3>Overview</h3>
             {data.fullDescription.paragraph.map((eachPara) => (
               <Paragraph
-                key={uuidv4()}
+                key={uniqueId()}
                 text={eachPara.text && eachPara.text} //send only if text is present or null
                 list={eachPara.list && eachPara.list} //send only if list is present or null
                 qoute={eachPara.qoute && eachPara.qoute} //send only if qoute is present or null
@@ -61,7 +74,7 @@ function DisplayScheme({ element }) {
         </div>
 
         <div className="col-xl-4">
-          <Stats />
+          <Stats info={data.stats} />
         </div>
       </div>
 
@@ -69,13 +82,13 @@ function DisplayScheme({ element }) {
       <h3>Other Schemes</h3>
       <div className="row row-cols-1 row-cols-md-4">
         {otherSchemes.map((t) => <div>
-          <ImageCard key={uuidv4()} image={t.image} title={t.title} link={`/Schemes/${t.title}`} />
+          <ImageCard key={uniqueId()} image={`http://localhost:6098${t.image}`} title={t.title} link={`/Schemes/${t.title}`} />
         </div>)}
       </div>
     </div>
   </>
   ) : (
-        <h1>NotFound</h1>
+        <h4 className="text-center">Loading...</h4>
       );
 }
 

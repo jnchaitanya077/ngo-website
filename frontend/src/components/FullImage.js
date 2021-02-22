@@ -1,6 +1,7 @@
 import React from "react";
-import DynamicButton from "./DynamicButton";
 import "../css/Image.css";
+import { cta } from "../data/Styles";
+import Button from "./Button";
 
 function FullImage({ schemeDetails }) {
   // console.log(schemeDetails);
@@ -8,7 +9,7 @@ function FullImage({ schemeDetails }) {
     <div className="col">
       <div className="card card-image shadow-sm bg-white rounded">
         <img
-          src={schemeDetails.image}
+          src={`http://localhost:6098${schemeDetails.image}`}
           className="image img-fluid"
           alt="cause"
         />
@@ -16,10 +17,11 @@ function FullImage({ schemeDetails }) {
           <div className="text cssanimation moveFromLeft fw-light">
             {schemeDetails.overlayText}
             <div className="mt-2">
-              <DynamicButton
-                className="mt-4"
+              <Button
                 name="Know more"
-                schemeDetails={schemeDetails}
+                url={`/Schemes/${schemeDetails.title}`}
+                type="btn-sm"
+                style={cta}
               />
             </div>
           </div>

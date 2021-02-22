@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Waypoint from './Waypoint';
 import Button from './Button'
-import Lightbox from 'react-image-lightbox';
-import { useRouteMatch } from "react-router-dom";
+import ReactImageVideoLightbox from "react-image-video-lightbox"; import { useRouteMatch } from "react-router-dom";
 import GradientImage from './GradientImage';
-import 'react-image-lightbox/style.css';
 import { cta } from '../data/Styles'
 
 function GalleryDisplay({ element, albumPhotos }) {
@@ -29,14 +27,15 @@ function GalleryDisplay({ element, albumPhotos }) {
             setAlbum(albumPhotos)
 
         } else {
-            console.log("else")
+            alert("he")
         }
-    }, [])
+    }, [albumPhotos, albumTitle])
 
 
     const onSelect = (photoIndex) => {
         setPhoto({ photoIndex: photoIndex, isOpen: true })
     }
+    console.log(album[0])
 
     return (
         <div>
@@ -44,35 +43,24 @@ function GalleryDisplay({ element, albumPhotos }) {
             <div className="container odd">
                 <Waypoint element={element} />
                 <div className="row">
-                    {album.map((image) => <div
+                    {album.map((item) => <div
                         className="col-md-4 col-xl-3 mb-4"
                     >
-                        <img src={image}
-                            alt="pic"
+                        <img src={item.url}
+                            alt={item.altTag}
                             className="fluid-image shadow-lg "
                             width="100%"
                             height="auto"
                             style={{ border: "5px solid grey" }}
-                            onClick={() => onSelect(album.indexOf(image))}
+                            onClick={() => onSelect(album.findIndex(x => x.url === item.url))}
                         />
                     </div>)}
 
-                    {photo.isOpen && <Lightbox
-                        mainSrc={album[photo.photoIndex]}
-                        nextSrc={album[(photo.photoIndex + 1) % album.length]}
-                        prevSrc={album[(photo.photoIndex + album.length - 1) % album.length]}
-                        onMovePrevRequest={() => setPhoto({
-                            ...photo,
-                            photoIndex: (photo.photoIndex + album.length - 1) % album.length,
-                        })}
-                        onMoveNextRequest={() => setPhoto({
-                            ...photo,
-                            photoIndex: (photo.photoIndex + 1) % album.length,
-                        })}
-                        onCloseRequest={() => setPhoto({
-                            ...photo,
-                            isOpen: false
-                        })}
+                    {photo.isOpen && <ReactImageVideoLightbox
+                        data={album}
+                        startIndex={photo.photoIndex}
+                        showResourceCount={true}
+                        onCloseCallback={() => setPhoto({ ...photo, isOpen: false })}
                     />}
                 </div>
                 <Button name="Back" style={cta} url="/Gallery" />
@@ -83,17 +71,3 @@ function GalleryDisplay({ element, albumPhotos }) {
 
 
 export default GalleryDisplay;
-
-const photos = [
-    {
-        albumId: 1,
-        albumName: "",
-        photos: []
-    },
-    {
-        albumId: 1,
-        albumName: "",
-        photos: []
-    },
-
-]

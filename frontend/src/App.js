@@ -20,15 +20,17 @@ import Gallery from "./pages/Gallery"
 import GalleryDisplay from "./components/GalleryDisplay";
 
 function App() {
+  // sticky Navigation
   const { isSticky, element } = useSticky();
   // Gallery state
   const [albumPhotos, setAlbumPhotos] = useState([]);
 
   function setAlbum(photos) {
-    // console.log(photos)
     setAlbumPhotos(photos);
     console.log(albumPhotos)
   }
+
+
   return (
     <Router>
       <Navigation sticky={isSticky} />
@@ -97,6 +99,35 @@ function App() {
             element={element}
             albumPhotos={albumPhotos} />}
       />
+      {/* <Route
+        path="/PrintMedia"
+        render={() =>
+          <GalleryDisplay
+            element={element}
+            albumPhotos={albumPhotos} />}
+      />
+      <Route
+        path="/ElectronicMedia"
+        render={() =>
+          <GalleryDisplay
+            element={element}
+            albumPhotos={albumPhotos} />}
+      />
+      <Route
+        path="/SocialMedia"
+        render={() =>
+          <GalleryDisplay
+            element={element}
+            albumPhotos={albumPhotos} />}
+      />
+      <Route
+        path="/VideoInterview"
+        render={() =>
+          <GalleryDisplay
+            element={element}
+            albumPhotos={albumPhotos} />}
+      /> */}
+
 
 
 

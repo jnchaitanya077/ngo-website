@@ -128,11 +128,11 @@ const navItems = [
     isActive: false,
     tabTitle: "Media",
     navList: [
-      { linkTitle: "Print Media", link: "", id: 0 },
-      { linkTitle: "Electronic Media", link: "", id: 1 },
-      { linkTitle: "Social Media", link: "", id: 2 },
+      { linkTitle: "Print Media", link: "/Gallery/PrintMedia", id: 0 },
+      { linkTitle: "Electronic Media", link: "/Gallery/ElectronicMedia", id: 1 },
+      { linkTitle: "Social Media", link: "/Gallery/SocialMedia", id: 2 },
       { linkTitle: "Gallery", link: "/Gallery", id: 3 },
-      { linkTitle: "Video Interview", link: "", id: 4 },
+      { linkTitle: "Video Interview", link: "/Gallery/VideoInterviews", id: 4 },
     ],
     url: ""
   },
