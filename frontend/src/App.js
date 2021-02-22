@@ -14,8 +14,6 @@ import AnnualReports from "./pages/AnnualReports";
 import About from "./pages/About";
 import DonarDetails from "./pages/DonarDetails";
 import CashAwards from "./pages/CashAwards";
-import StudentScholarships from "./pages/StudentScholarships"
-import Medals from "./pages/Medals"
 import Gallery from "./pages/Gallery"
 import GalleryDisplay from "./components/GalleryDisplay";
 
@@ -68,23 +66,14 @@ function App() {
         render={() => <DonarDetails element={element} />}
       />
 
-      {/* Scholorships */}
+      {/* Awards */}
 
       <Route
         exact
-        path="/CashAwards"
+        path="/Awards/:category"
         render={() => <CashAwards element={element} />}
       />
-      <Route
-        exact
-        path="/StudentScholarship"
-        render={() => <StudentScholarships element={element} />}
-      />
-      <Route
-        exact
-        path="/Medals"
-        render={() => <Medals element={element} />}
-      />
+
 
       {/* Gallery Routes */}
       <Route
@@ -99,37 +88,6 @@ function App() {
             element={element}
             albumPhotos={albumPhotos} />}
       />
-      {/* <Route
-        path="/PrintMedia"
-        render={() =>
-          <GalleryDisplay
-            element={element}
-            albumPhotos={albumPhotos} />}
-      />
-      <Route
-        path="/ElectronicMedia"
-        render={() =>
-          <GalleryDisplay
-            element={element}
-            albumPhotos={albumPhotos} />}
-      />
-      <Route
-        path="/SocialMedia"
-        render={() =>
-          <GalleryDisplay
-            element={element}
-            albumPhotos={albumPhotos} />}
-      />
-      <Route
-        path="/VideoInterview"
-        render={() =>
-          <GalleryDisplay
-            element={element}
-            albumPhotos={albumPhotos} />}
-      /> */}
-
-
-
 
       {/* Scheme Routes */}
       <Route

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouteMatch } from "react-router-dom";
-import { SchemesDetails } from "../data/Schemes";
 import Paragraph from "./ParagraphBuilder";
 import Waypoint from "./Waypoint";
-import { v4 as uuidv4 } from 'uuid';
 import GradientImage from "./GradientImage";
 import Button from "./Button";
 import { cta } from "../data/Styles"

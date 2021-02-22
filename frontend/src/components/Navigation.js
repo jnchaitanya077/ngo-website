@@ -106,10 +106,10 @@ const navItems = [
     isActive: false,
     tabTitle: "Scholarships",
     navList: [
-      { linkTitle: "Cash Awards", link: "/CashAwards", id: 0 },
-      { linkTitle: "Student Scholorships", link: "/StudentScholarship", id: 1 },
-      { linkTitle: "Medals", link: "/Medals", id: 2 },
-      { linkTitle: "Certificates", link: "", id: 3 },
+      { linkTitle: "Cash Awards", link: "/Awards/Cash Awards", id: 0 },
+      { linkTitle: "Student Scholarships", link: "/Awards/Scholarships", id: 1 },
+      { linkTitle: "Medals", link: "/Awards/Medals", id: 2 },
+      { linkTitle: "Certificates", link: "/Awards/Certificates", id: 3 },
     ],
     url: ""
   },

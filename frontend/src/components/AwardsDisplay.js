@@ -7,6 +7,7 @@ import 'react-image-lightbox/style.css';
 
 
 function AwardsDisplay({ element, title, awardDetails, info }) {
+    const BASE_URL = 'http://localhost:6098'
     const [photo, setPhoto] = useState({
         photoIndex: 0,
         isOpen: false
@@ -14,7 +15,6 @@ function AwardsDisplay({ element, title, awardDetails, info }) {
 
     const onSelect = (photoIndex) => {
         setPhoto({ photoIndex: photoIndex, isOpen: true })
-
     }
 
     return (
@@ -29,7 +29,7 @@ function AwardsDisplay({ element, title, awardDetails, info }) {
                     <div className="col-md-6 mb-2" style={{ cursor: "zoom-in" }}>
                         <AwardsCard
                             id={awardDetail.id}
-                            image={awardDetail.image}
+                            image={`${BASE_URL}/${awardDetail.image}`}
                             name={awardDetail.name}
                             event={awardDetail.event}
                             amount={awardDetail.amount}
@@ -37,7 +37,7 @@ function AwardsDisplay({ element, title, awardDetails, info }) {
                         />
                     </div>)}
                 {photo.isOpen && <Lightbox
-                    mainSrc={awardDetails[photo.photoIndex].image}
+                    mainSrc={`${BASE_URL}/${awardDetails[photo.photoIndex].image}`}
                     onCloseRequest={() => setPhoto({
                         ...photo,
                         isOpen: false
