@@ -7,7 +7,7 @@ import SchemeDisplay from "./components/displayScheme";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import "./css/App.css";
-import Team from "./pages/Team";
+import Team from "./pages/AboutTeam";
 import AboutTeam from "./pages/AboutTeam";
 import FaqDispaly from "./pages/Faq";
 import AnnualReports from "./pages/AnnualReports";
@@ -49,7 +49,7 @@ function App() {
       <Route
         exact
         path="/Team"
-        render={(match) => <Team match={match} element={element} />}
+        render={() => <Team element={element} />}
       />
       <Route
         exact

@@ -1,47 +1,51 @@
 import React, { useState } from 'react';
-import _ from "lodash";
-import { useRouteMatch } from 'react-router-dom';
-import { teamData } from "../data/TeamData";
 import GradientImage from '../components/GradientImage';
 import Person from '../components/Person';
 import Waypoint from '../components/Waypoint';
+import axios from 'axios';
+import teamImage from "../images/team.jpg"
 
 function AboutTeam({ element }) {
-    var teamName = useRouteMatch("/Team/:TeamId");
-    const {
-        params: { TeamId },
-    } = teamName;
 
-    const [loading, isloaded] = useState(false);
+    const [isLoading, Loading] = useState(true);
     const [data, setData] = useState();
+    const BASE_URL = "http://localhost:6098";
 
     useState(() => {
-        const data = _.camelCase(TeamId);
-        const d = teamData[data];
-        setData(d);
-        isloaded(!loading);
-    }, [TeamId]);
+        const headers = {
+            'Content-Type': 'application/json'
+        }
+        axios.get(`${BASE_URL}/loadMembers`, { headers })
+            .then(function (response) {
+                setData(response.data[0].boardMembers)
+                Loading(false)
+            })
+            .catch(err => console.log(err))
+    }, []);
 
     return (
-        <>{loading ? <>
-            <GradientImage title={TeamId} />
+        <>{!isLoading ? <>
+            <GradientImage title="Board Members" image={teamImage} />
             <Waypoint element={element} />
             <div className="container">
                 <div className="row d-flex mt-3">
-                    {data.map((eachPerson) =>
-                        <Person image={"https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/1.jpg"}
-                            name={eachPerson.name}
-                            position={eachPerson.position}
-                            content={eachPerson.content}
+                    {data.map((eachMember) =>
+                        <Person image={`${BASE_URL}${eachMember.image}`}
+                            name={eachMember.name}
+                            position={eachMember.position}
+                            content={eachMember.content}
                         />
                     )}
                 </div>
             </div>
-        </> : <h3 className="text-center">Loading</h3>}
+        </> : <h3 className="text-center">Loading...</h3>}
         </>
+
     );
 }
 
 export default AboutTeam;
+
+
 
 

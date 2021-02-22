@@ -18,9 +18,9 @@ const Schemes = mongoose.model("schemesInfo", schemes)
 
 /* GET users listing. */
 router.get('/', function (req, res) {
-  Schemes.find({}, (err, foudData) => {
+  Schemes.find({}, (err, foundData) => {
     if (!err) {
-      res.send(foudData)
+      res.send(foundData)
     } else {
       console.log(err);
     }

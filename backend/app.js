@@ -14,7 +14,7 @@ mongoose.connect("mongodb://localhost:27017/Schemes", {
     .catch((e) => console.log(e))
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/schemes');
+var schemeRouter = require('./routes/schemes');
 var galleryRouter = require('./routes/gallery')
 
 var app = express();
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.static('public'))
 
 app.use('/', indexRouter);
-app.use('/loadSchemes', usersRouter);
+app.use('/loadSchemes', schemeRouter);
 app.use('/gallery', galleryRouter);
 
 
