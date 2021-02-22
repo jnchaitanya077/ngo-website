@@ -15,7 +15,6 @@ function CashAwards({ element }) {
     const BASE_URL = 'http://localhost:6098/awards'
 
     useEffect(() => {
-        alert(category)
         axios.get(`${BASE_URL}/${category}`)
             .then(function (response) {
                 setData(response.data)
