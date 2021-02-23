@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import FullHeading from '../components/FullHeading';
 import Image from '../components/Image';
 import Waypoint from '../components/Waypoint';
+import axios from 'axios'
 
 import image from "../images/education.jpg"
 function Gallery({ element, onAblumSelectSendPhotos }) {
+
+    const [albums, setAlbums] = useState()
+    const [isLoading, Loading] = useState(true)
+    const BASE_URL = 'http://localhost:6098'
+
+    useEffect(() => {
+
+        axios.get(`${BASE_URL}/gallery`)
+            .then(function (response) {
+                setAlbums(response.data)
+                console.log(albums)
+                Loading(false)
+            })
+            .catch(err => console.log(err))
+    }, [])
+
     const onAblumSelect = (photos) => {
         onAblumSelectSendPhotos(photos)
     }
@@ -18,14 +35,17 @@ function Gallery({ element, onAblumSelectSendPhotos }) {
                 {info}
             </div>
             <div className="row">
-                {albums.map((album) =>
-                    <div key={album.albumId} className="col-12 col-md-4 col-xxl-3 mb-3"
-                        onClick={() => onAblumSelect(album.photos)}>
-                        <Image image={album.thumbnail} text={album.overlayText} />
-                        <Link to={`/Gallery/${album.eventTitle}`}>
-                            <h6 className="text-center">{album.eventTitle}</h6>
-                        </Link>
-                    </div>)}
+                {!isLoading ? <>
+                    {albums.map((album) =>
+                        <div key={album.albumId} className="col-12 col-md-4 col-xxl-3 mb-3"
+                            onClick={() => onAblumSelect(album.photos)}>
+                            <Image image={`${BASE_URL}${album.thumbnail}`} text={album.overlayText} />
+                            <Link to={`/Gallery/${album.eventTitle}`}>
+                                <h6 className="text-center">{album.eventTitle}</h6>
+                            </Link>
+                        </div>)}
+
+                </> : <h4 className="text-center">Loading...</h4>}
             </div>
         </div>
     );
@@ -34,85 +54,87 @@ function Gallery({ element, onAblumSelectSendPhotos }) {
 export default Gallery;
 // to={`/Gallery/${album.eventTitle}`}
 
-const albums = [
+
+
+const albumss = [
     {
         albumId: 1,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        thumbnail: image,
+        thumbnail: "/images/albums/army.jpg",
         photos: [
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" }]
+            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
 
     },
     {
         albumId: 2,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        thumbnail: image,
+        thumbnail: "/images/albums/children.jpg",
         photos: [
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" }]
+            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
     {
         albumId: 3,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        thumbnail: image,
+        thumbnail: "/images/albums/education.jpg",
         photos: [
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" }]
+            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
     {
         albumId: 4,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        thumbnail: image,
+        thumbnail: "/images/albums/miniature.jpg",
         photos: [
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" }]
+            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
     {
         albumId: 5,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        thumbnail: image,
+        thumbnail: "/images/albums/self-defence.jpg",
         photos: [
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" }]
+            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
     {
         albumId: 6,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        thumbnail: image,
+        thumbnail: "/images/albums/solar-power.jpg",
         photos: [
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" },
-            { url: image, type: "photo", altTag: "photo" }]
+            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
 
 ];

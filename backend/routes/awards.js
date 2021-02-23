@@ -29,7 +29,6 @@ router.get('/:awardCategory', function (req, res, next) {
     console.log(searchString)
     Awards.find({}, { 'category': 1 }, (err, foundData) => {
         if (!err) {
-            console.log(foundData[0].category)
             res.send(foundData[0].category[searchString])
         } else {
             console.log(err)

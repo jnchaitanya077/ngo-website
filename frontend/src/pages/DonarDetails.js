@@ -22,7 +22,7 @@ function DonarDetails({ element }) {
 
     return (
         <div className="container odd">
-            <FullHeading title="Donar Details" />
+            <FullHeading title="Donor Details" />
             <Waypoint element={element} />
             <div>
                 <table class="table table-striped" style={{ backgroundColor: "#39bb39" }}>
@@ -47,7 +47,7 @@ function DonarDetails({ element }) {
     );
 }
 
-const tableHead = ["S.No", "Name of the Donar", "Donate to", "Amount"];
+const tableHead = ["S.No", "Name of the Donor", "Donate to", "Amount"];
 const data = [{ id: 1, name: "Mark", scheme: "Bharatiya Suraj Bijili Yojana", amount: 5000 },
 { id: 2, name: "Mark", scheme: "Bharatiya Nari Shakti Yojana", amount: 10000 },
 { id: 3, name: "Mark", scheme: "Bharatiya Varshjal Sanchayan Yojana", amount: 10000 },
