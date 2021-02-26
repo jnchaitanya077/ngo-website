@@ -15,17 +15,17 @@ function Stats({ info }) {
                 <img className="img-fluid me-2" width={60} src={donation} alt=".." />
             Total Funds Collected :
             </h5>
-            <p className="fs-3">{info.fundsCollected}</p>
+            <p className="fs-3">{info ? info.fundsCollected : ""}</p>
             <h5>
                 <img className="img-fluid me-2" width={60} src={help} alt=".." />
             Total people Helped:
             </h5>
-            <p className="fs-3">{info.peopleBenefited}</p>
+            <p className="fs-3">{info ? info.peopleBenefited : ""}</p>
             <h5>
                 <img className="img-fluid me-2" width={60} src={people} alt=".." />
             scholorships granted:
             </h5>
-            <p className="fs-3">{info.moneySpent}</p>
+            <p className="fs-3">{info ? info.moneySpent : ""}</p>
         </div>
     );
 }

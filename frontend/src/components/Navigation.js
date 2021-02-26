@@ -60,20 +60,20 @@ const navItems = [
     isActive: false,
     tabTitle: "Schemes",
     navList: [
-      { linkTitle: "Bharatiya Balavikas Yojana", link: "/Schemes/:", id: 0 },
-      { linkTitle: "Bharatiya Naari Shakti Yojana", link: "/Schemes/:", id: 1 },
-      { linkTitle: "Bharatiya Jaldhar Yojana", link: "/Schemes/:", id: 2 },
-      { linkTitle: "Bharatiya Suraj Bijili Yojana", link: "/Schemes/:", id: 3 },
+      { linkTitle: "Bharatiya Balavikas Yojana", link: "/Schemes/Bharatiya-Balavikas-Yojana", id: 0 },
+      { linkTitle: "Bharatiya Naari Shakti Yojana", link: "/Schemes/Bharatiya-Naari-Shakti-Yojana", id: 1 },
+      { linkTitle: "Bharatiya Jaldhar Yojana", link: "/Schemes/Bharatiya-Jaldhar-Yojana", id: 2 },
+      { linkTitle: "Bharatiya Suraj Bijili Yojana", link: "/Schemes/Bharatiya-Suraj-Bijili-Yojana", id: 3 },
       {
         linkTitle: "Bharatiya Varshjal Sanchayan Yojana",
-        link: "/Schemes/:",
+        link: "/Schemes/Bharatiya-Varshjal-Sanchayan-Yojana",
         id: 4,
       },
-      { linkTitle: "Bharatiya Rakshak Yuva Sena", link: "/Schemes/:", id: 5 },
-      { linkTitle: "Grameen kalabharati Yojana", link: "/Schemes/:", id: 6 },
+      { linkTitle: "Bharatiya Rakshak Yuva Sena", link: "/Schemes/Bharatiya-Rakshak-YuvaSena", id: 5 },
+      { linkTitle: "Grameen Kalabharati Yojana", link: "/Schemes/Grameen-Kalabharati-Yojana", id: 6 },
       {
         linkTitle: "Matha Shishu Samrakshana Yojana",
-        link: "/Schemes/:",
+        link: "/Schemes/Matha-Shishu-Samrakshana-Yojana",
         id: 7,
       },
     ],
@@ -94,12 +94,12 @@ const navItems = [
     isActive: false,
     tabTitle: "Support",
     navList: [
-      { linkTitle: "Government Organizations", link: "", id: 0 },
+      { linkTitle: "Government Organizations", link: "/", id: 0 },
       { linkTitle: "Corporate Organizations", link: "", id: 1 },
       { linkTitle: "Institution & Organization", link: "", id: 2 },
       { linkTitle: "Philanthropists", link: "", id: 3 },
     ],
-    url: ""
+    url: "/Organizations"
   },
   {
     id: 4,
@@ -128,19 +128,19 @@ const navItems = [
     isActive: false,
     tabTitle: "Media",
     navList: [
-      { linkTitle: "Print Media", link: "/Gallery/PrintMedia", id: 0 },
-      { linkTitle: "Electronic Media", link: "/Gallery/ElectronicMedia", id: 1 },
-      { linkTitle: "Social Media", link: "/Gallery/SocialMedia", id: 2 },
+      { linkTitle: "Print Media", link: "/Media/PrintMedia", id: 0 },
+      { linkTitle: "Electronic Media", link: "/Media/ElectronicMedia", id: 1 },
+      { linkTitle: "Social Media", link: "/Media/SocialMedia", id: 2 },
       { linkTitle: "Gallery", link: "/Gallery", id: 3 },
-      { linkTitle: "Video Interview", link: "/Gallery/VideoInterviews", id: 4 },
+      { linkTitle: "Video Interview", link: "/Media/VideoInterviews", id: 4 },
     ],
-    url: ""
+    url: "/Media"
   },
   {
     id: 8,
     isActive: false,
     tabTitle: "Contact Us",
     navList: [],
-    url: ""
+    url: "/Contact"
   },
 ];

@@ -3,6 +3,9 @@ import AwardsDisplay from '../components/AwardsDisplay';
 import { uniqueId } from 'lodash';
 import axios from 'axios';
 import { useRouteMatch } from 'react-router-dom';
+import Stats from '../components/Stats';
+import News from '../components/News';
+import ActionCards from '../components/ActionCards';
 
 function CashAwards({ element }) {
     const match = useRouteMatch("/Awards/:category");
@@ -24,15 +27,29 @@ function CashAwards({ element }) {
     }, [category])
 
     return (
-        isLoading ? <h4 className="text-center">Loading...</h4>
+        isLoading ? <div class="ui active centered inline loader"></div>
             : <>
-                <AwardsDisplay
-                    key={uniqueId()}
-                    element={element}
-                    title={category}
-                    info={info}
-                    awardDetails={data}
-                />
+                <div className="container mt-5 w-75">
+                    <div className="row">
+                        <div className="col-md-9">
+                            <AwardsDisplay
+                                key={uniqueId()}
+                                element={element}
+                                title={category}
+                                info={info}
+                                awardDetails={data}
+                            />
+                        </div>
+                        <div className="col-md-3">
+                            <News title="News & Events" />
+                            <ActionCards
+                                title="Volunteer With Us"
+                                link="/Join"
+                                btnName="Join us" />
+
+                        </div>
+                    </div>
+                </div>
             </>
     );
 }

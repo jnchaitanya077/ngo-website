@@ -1,19 +1,22 @@
 import React from 'react';
+import "../css/GalleryImage.css"
+
 
 
 function AwardsCard({ image, name, event, amount, id, onSelect }) {
-    function handleClick() {
-        onSelect(id);
-    }
     return (
         <div className="row">
-            <div className="col-md-12 col-xl-6" onClick={handleClick}>
-                <img src={image} alt="aboutUSImage" className="img-fluid" />
-            </div>
-            <div className="col-md-12 col-xl-6">
-                <p className="mb-0"><em className="fw-bold">Name </em> : {name}</p>
-                <p className="mb-0"><em className="fw-bold">Event </em>: {event}</p>
-                <p className="mb-0"><em className="fw-bold">Cash Awarded </em>:{amount}</p>
+            <div className="card shadow p-2">
+                <div className="container-relative-img shadow-lg">
+                    <img src={image} alt="Avatar" className="gallery-image rounded" />
+                    <div className="gallery-image-overlay">
+                        <div className="gallery-text">
+                            <h6>Name: <em className="fw-light">{name}</em></h6>
+                            <h6>Event: <em className="fw-light">{event}</em></h6>
+                            <h6>Amount: <em className="fw-light">{amount}</em></h6>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

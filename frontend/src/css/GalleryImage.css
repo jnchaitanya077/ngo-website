@@ -23,8 +23,8 @@
   transition: 0.5s ease;
 }
 
-.container-relative-img .gallery-image-overlay {
-  height: 40%;
+.container-relative-img:hover .gallery-image-overlay {
+  height: 100%;
 }
 
 .gallery-text {

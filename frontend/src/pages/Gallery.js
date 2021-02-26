@@ -40,7 +40,7 @@ function Gallery({ element, onAblumSelectSendPhotos }) {
                         <div key={album.albumId} className="col-12 col-md-4 col-xxl-3 mb-3"
                             onClick={() => onAblumSelect(album.photos)}>
                             <Image image={`${BASE_URL}${album.thumbnail}`} text={album.overlayText} />
-                            <Link to={`/Gallery/${album.eventTitle}`}>
+                            <Link to={`/Gallery/${album.albumId}`}>
                                 <h6 className="text-center">{album.eventTitle}</h6>
                             </Link>
                         </div>)}
@@ -63,12 +63,12 @@ const albumss = [
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: "/images/albums/army.jpg",
         photos: [
-            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
+            { url: "http://localhost:6098/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
 
     },
     {
@@ -77,12 +77,12 @@ const albumss = [
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: "/images/albums/children.jpg",
         photos: [
-            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
+            { url: "http://localhost:6098/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
     {
         albumId: 3,
@@ -90,25 +90,25 @@ const albumss = [
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: "/images/albums/education.jpg",
         photos: [
-            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
+            { url: "http://localhost:6098/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
     {
         albumId: 4,
         eventTitle: "Sample Title",
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-        thumbnail: "/images/albums/miniature.jpg",
+        thumbnail: "/images/albums/miniature-art.jpg",
         photos: [
-            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
+            { url: "http://localhost:6098/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
     {
         albumId: 5,
@@ -116,12 +116,12 @@ const albumss = [
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: "/images/albums/self-defence.jpg",
         photos: [
-            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
+            { url: "http://localhost:6098/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
     {
         albumId: 6,
@@ -129,12 +129,12 @@ const albumss = [
         overlayText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         thumbnail: "/images/albums/solar-power.jpg",
         photos: [
-            { url: "/images/albums/army.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/report.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
-            { url: "/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
+            { url: "http://localhost:6098/images/albums/army.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/women-with-child.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/report.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/self-defence.jpg", type: "photo", altTag: "photo" },
+            { url: "http://localhost:6098/images/albums/talent.jpg", type: "photo", altTag: "photo" }]
     },
 
 ];

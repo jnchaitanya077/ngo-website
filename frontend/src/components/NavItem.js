@@ -6,12 +6,7 @@ function NavItem({ eachItem }) {
     <li className="nav-item">
       <Link
         className="nav-link text-nowrap"
-        to={
-          eachItem.link.includes(":")
-            ? eachItem.link.substring(0, eachItem.link.length - 1) +
-            eachItem.linkTitle
-            : eachItem.link
-        }
+        to={eachItem.link}
       >
         {eachItem.linkTitle}
       </Link>

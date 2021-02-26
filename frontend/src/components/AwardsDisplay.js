@@ -4,21 +4,22 @@ import AwardsCard from './AwardsCard';
 import FullHeading from './FullHeading';
 import Waypoint from './Waypoint';
 import 'react-image-lightbox/style.css';
+import ActionCards from './ActionCards';
 
 
 function AwardsDisplay({ element, title, awardDetails, info }) {
     const BASE_URL = 'http://localhost:6098'
-    const [photo, setPhoto] = useState({
-        photoIndex: 0,
-        isOpen: false
-    })
+    // const [photo, setPhoto] = useState({
+    //     photoIndex: 0,
+    //     isOpen: false
+    // })
 
-    const onSelect = (photoIndex) => {
-        setPhoto({ photoIndex: photoIndex, isOpen: true })
-    }
+    // const onSelect = (photoIndex) => {
+    //     setPhoto({ photoIndex: photoIndex, isOpen: true })
+    // }
 
     return (
-        <div className="container odd">
+        <div className="">
             <Waypoint element={element} />
             <FullHeading title={title} />
             <div className="mb-3">
@@ -33,17 +34,42 @@ function AwardsDisplay({ element, title, awardDetails, info }) {
                             name={awardDetail.name}
                             event={awardDetail.event}
                             amount={awardDetail.amount}
-                            onSelect={onSelect}
                         />
                     </div>)}
-                {photo.isOpen && <Lightbox
+                {/* {photo.isOpen && <Lightbox
                     mainSrc={`${BASE_URL}/${awardDetails[photo.photoIndex].image}`}
                     onCloseRequest={() => setPhoto({
                         ...photo,
                         isOpen: false
                     })}
-                />}
+                />} */}
             </div>
+            <hr />
+            <div className="row mb-5">
+                <div className="col-md-4">
+                    <ActionCards
+                        title="Gallery"
+                        btnName="see more"
+                        link="/Gallery"
+                        headingLink={false} />
+                </div>
+                <div className="col-md-4">
+                    <ActionCards
+                        title="Media"
+                        btnName="see more"
+                        link="/Media"
+                        headingLink={false} />
+                </div>
+                <div className="col-md-4">
+                    <ActionCards
+                        title="Video Interviews"
+                        btnName="see more"
+                        link="/Media/VideoInterviews"
+                        headingLink={false} />
+                </div>
+
+            </div>
+
         </div>
     );
 }

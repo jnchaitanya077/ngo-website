@@ -24,7 +24,15 @@ router.get("/", function (req, res) {
     })
 })
 router.get('/:albumId', function (req, res, next) {
-    res.send(`response recived for album id:${req.params.albumId}`)
+    const albumId = req.params.albumId
+    console.log(albumId)
+    Albums.findOne({ albumId: albumId }, (err, result) => {
+        if (!err) {
+            res.send(result)
+        } else {
+            console.log(err)
+        }
+    })
 })
 
 

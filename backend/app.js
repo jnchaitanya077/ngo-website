@@ -16,7 +16,8 @@ mongoose.connect("mongodb://localhost:27017/Schemes", {
 var indexRouter = require('./routes/index');
 var schemeRouter = require('./routes/schemes');
 var galleryRouter = require('./routes/gallery');
-var awardsRouter = require('./routes/awards.js')
+var awardsRouter = require('./routes/awards');
+var mediaRouter = require('./routes/media');
 
 var app = express();
 app.use(cors())
@@ -30,7 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/loadSchemes', schemeRouter);
 app.use('/gallery', galleryRouter);
-app.use('/awards', awardsRouter)
+app.use('/awards', awardsRouter);
+app.use('/media', mediaRouter);
 
 
 

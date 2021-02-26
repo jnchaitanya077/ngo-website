@@ -9,19 +9,22 @@ function NavList(props) {
       {props.navItems.map((eachNavItem) => {
         return (
           <li key={eachNavItem.id} className="nav-item dropdown">
-            {eachNavItem.navList.length > 0 ? <Link
-              href=".."
-              className="nav-link text-nowrap"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style={props.sticky ? props.styles : null}
-            >
-              {eachNavItem.tabTitle}
-              {/* display icon only when dropdown is present */}
-              <i className="small caret down icon"></i>
-            </Link> : <Link className="nav-link" aria-current="page" href={eachNavItem.url}>{eachNavItem.tabTitle}</Link>}
+            {eachNavItem.navList.length > 0 ?
+              <Link
+                to={eachNavItem.url}
+                className="nav-link text-nowrap"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style={props.sticky ? props.styles : null}
+              >
+                {eachNavItem.tabTitle}
+                {/* display icon only when dropdown is present */}
+                <i className="small caret down icon"></i>
+              </Link>
+              :
+              <Link className="nav-link" aria-current="page" to={eachNavItem.url}>{eachNavItem.tabTitle}</Link>}
 
 
             {/* display only when dropdown menu is present */}

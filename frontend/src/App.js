@@ -16,6 +16,9 @@ import DonarDetails from "./pages/DonarDetails";
 import CashAwards from "./pages/CashAwards";
 import Gallery from "./pages/Gallery"
 import GalleryDisplay from "./components/GalleryDisplay";
+import MediaDisplay from "./components/MediaDisplay";
+import Media from "./pages/Media";
+import Contact from "./sections/Contact"
 
 function App() {
   // sticky Navigation
@@ -38,6 +41,8 @@ function App() {
       <Route exact path="/" render={() => <Homepage element={element} />} />
 
       <Route exact path="/About" render={() => <About element={element} />} />
+
+      <Route exact path="/Contact" render={() => <Contact element={element} />} />
 
       <Route
         exact
@@ -87,6 +92,19 @@ function App() {
           <GalleryDisplay
             element={element}
             albumPhotos={albumPhotos} />}
+      />
+
+      {/* Media  */}
+      <Route
+        exact
+        path="/Media"
+        render={() => <Media element={element} />}
+      />
+
+      <Route
+        path="/Media/:category"
+        render={() =>
+          <MediaDisplay element={element} />}
       />
 
       {/* Scheme Routes */}

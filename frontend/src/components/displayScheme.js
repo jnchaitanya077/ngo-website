@@ -9,6 +9,7 @@ import Stats from "./Stats";
 import ImageCard from "./ImageCard";
 import axios from 'axios';
 import { uniqueId } from "lodash";
+import _ from 'lodash';
 
 
 function DisplayScheme({ element }) {
@@ -19,6 +20,7 @@ function DisplayScheme({ element }) {
   const [data, setData] = useState({});
   const [otherSchemes, setSchemes] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [title, setFormatedTitle] = useState();
 
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -37,7 +39,10 @@ function DisplayScheme({ element }) {
   }, [schemeId]);
 
   function findScheme(response) {
-    const result = response.find((scheme) => scheme.title == schemeId)
+    let formatedTitleArr = _.split(schemeId, '-')
+    let formatedTitle = formatedTitleArr.join(" ")
+    setFormatedTitle(formatedTitle)
+    const result = response.find((scheme) => scheme.title == formatedTitle)
     setData(result);
   }
 
@@ -49,7 +54,7 @@ function DisplayScheme({ element }) {
   return isLoading ? (
     "Loading.."
   ) : data ? (<>
-    <GradientImage title={schemeId} image={`http://localhost:6098${data.image}`} />
+    <GradientImage title={title} image={`http://localhost:6098${data.image}`} />
     <div className="container">
       <div className="row">
         <div className="col-xl-8">
