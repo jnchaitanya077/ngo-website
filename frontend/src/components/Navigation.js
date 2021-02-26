@@ -94,9 +94,9 @@ const navItems = [
     isActive: false,
     tabTitle: "Support",
     navList: [
-      { linkTitle: "Government Organizations", link: "/", id: 0 },
-      { linkTitle: "Corporate Organizations", link: "", id: 1 },
-      { linkTitle: "Institution & Organization", link: "", id: 2 },
+      { linkTitle: "Government Organizations", link: "/Government", id: 0 },
+      { linkTitle: "Corporate Organizations", link: "/Corporate", id: 1 },
+      { linkTitle: "Institution & Organization", link: "/Institutions", id: 2 },
       { linkTitle: "Philanthropists", link: "", id: 3 },
     ],
     url: "/Organizations"

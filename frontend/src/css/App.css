@@ -26,7 +26,7 @@ html {
 /* Main Section (Landing-screen)*/
 .landing-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../images/children.jpg");
+    url("../images/main2.jpg");
   background-attachment: fixed;
   height: 70vh;
   background-size: cover;

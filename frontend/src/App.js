@@ -18,7 +18,11 @@ import Gallery from "./pages/Gallery"
 import GalleryDisplay from "./components/GalleryDisplay";
 import MediaDisplay from "./components/MediaDisplay";
 import Media from "./pages/Media";
-import Contact from "./sections/Contact"
+import Contact from "./sections/Contact";
+import GovernmentOrganization from "./pages/GovernmentOrganization"
+import CorporateOrganizations from "./pages/CorporateOrganizations";
+import Institutions from "./pages/Institutions";
+
 
 function App() {
   // sticky Navigation
@@ -78,6 +82,26 @@ function App() {
         path="/Awards/:category"
         render={() => <CashAwards element={element} />}
       />
+
+      {/* Support */}
+      <Route
+        exact
+        path="/Government"
+        render={() => <GovernmentOrganization element={element} />}
+      />
+      <Route
+        exact
+        path="/Corporate"
+        render={() => <CorporateOrganizations element={element} />}
+      />
+      <Route
+        exact
+        path="/Institutions"
+        render={() => <Institutions element={element} />}
+      />
+
+
+
 
 
       {/* Gallery Routes */}
