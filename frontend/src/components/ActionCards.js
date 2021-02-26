@@ -11,9 +11,9 @@ function ActionCards({ title, link, btnName, headingLink }) {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${Image})`, widows: "100%", height: "250px"
     }
     return (
-        <div style={shadow} className="text-center rounded">
+        <div style={shadow} className="text-center rounded ps-1">
             {headingLink ? <Link to={link}>
-                <h4 className="text-light mt-3 pt-5">{title}</h4>
+                <h4 className="text-light mt-3 pt-5 ">{title}</h4>
             </Link> : <h4 className="text-light mt-3 pt-5">{title}</h4>}
 
             {btnName ?
