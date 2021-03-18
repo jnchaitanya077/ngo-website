@@ -13,7 +13,7 @@ import Logo7 from "../images/support/dummy1.jpeg"
 
 function CorporateOrganizations({ element }) {
     return (
-        <div className="container">
+        <div className="container mt-5">
             <Waypoint element={element} />
             <div className="row odd">
                 <OrganizationDisplay

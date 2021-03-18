@@ -10,7 +10,7 @@ import OrganizationDisplay from '../components/OrganizationDisplay';
 
 function GovernmentOrganization({ element }) {
     return (
-        <div className="container">
+        <div className="container mt-5">
             <Waypoint element={element} />
             <div className="row odd">
                 <OrganizationDisplay

@@ -1,5 +1,7 @@
 import React from "react";
+import Button from "../components/Button";
 import FullHeading from "../components/FullHeading";
+import { cta } from "../data/Styles";
 import People from "../images/image-11.jpg";
 
 function About(props) {
@@ -45,7 +47,13 @@ function About(props) {
                 counseling sessions for needy sections on cost-free.
               </p>
             </div>
+            <Button name="Know More"
+              url="/About"
+              style={cta}
+              type="btn-sm mt-3" />
+
           </div>
+
         </div>
       </section>
     </div>
