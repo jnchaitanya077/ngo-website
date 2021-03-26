@@ -1,12 +1,14 @@
-var express = require('express');
 var path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, './.env') });
+var express = require('express');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+
 // connecting to mongoDB
-mongoose.connect("mongodb://localhost:27017/Schemes", {
+mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -35,9 +37,5 @@ app.use('/awards', awardsRouter);
 app.use('/media', mediaRouter);
 
 
-
-app.listen(6098, () => {
-    console.log(`Server is up and running ${6098}`)
-})
 
 module.exports = app;
