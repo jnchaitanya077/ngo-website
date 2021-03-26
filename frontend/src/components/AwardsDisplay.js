@@ -8,7 +8,7 @@ import ActionCards from './ActionCards';
 
 
 function AwardsDisplay({ element, title, awardDetails, info }) {
-    const BASE_URL = 'http://localhost:6098'
+    const BASE_URL = 'https://ngo-server-1.herokuapp.com'
     // const [photo, setPhoto] = useState({
     //     photoIndex: 0,
     //     isOpen: false

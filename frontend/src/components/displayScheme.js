@@ -29,7 +29,7 @@ function DisplayScheme({ element }) {
     const headers = {
       'Content-Type': 'application/json'
     }
-    axios.get("http://localhost:6098/loadSchemes", { headers })
+    axios.get("https://ngo-server-1.herokuapp.com/loadSchemes", { headers })
       .then(function (response) {
         findScheme(response.data)
         filterSchemes(response.data)
@@ -91,8 +91,8 @@ function DisplayScheme({ element }) {
     </div>
   </>
   ) : (
-        <h4 className="text-center">Loading...</h4>
-      );
+    <h4 className="text-center">Loading...</h4>
+  );
 }
 
 export default DisplayScheme;

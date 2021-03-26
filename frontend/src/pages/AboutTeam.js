@@ -9,7 +9,7 @@ function AboutTeam({ element }) {
 
     const [isLoading, Loading] = useState(true);
     const [data, setData] = useState();
-    const BASE_URL = "http://localhost:6098";
+    const BASE_URL = "https://ngo-server-1.herokuapp.com/";
 
     useState(() => {
         const headers = {

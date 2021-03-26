@@ -9,7 +9,7 @@ function FullImage({ schemeDetails }) {
     <div className="col">
       <div className="card card-image shadow-sm bg-white rounded">
         <img
-          src={`http://localhost:6098${schemeDetails.image}`}
+          src={`https://ngo-server-1.herokuapp.com${schemeDetails.image}`}
           className="image img-fluid"
           alt="cause"
         />

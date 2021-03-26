@@ -10,7 +10,7 @@ function Gallery({ element, onAblumSelectSendPhotos }) {
 
     const [albums, setAlbums] = useState()
     const [isLoading, Loading] = useState(true)
-    const BASE_URL = 'http://localhost:6098'
+    const BASE_URL = 'https://ngo-server-1.herokuapp.com/'
 
     useEffect(() => {
 

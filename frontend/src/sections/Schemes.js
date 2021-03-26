@@ -16,7 +16,7 @@ function Schemes({ element }) {
     const headers = {
       'Content-Type': 'application/json'
     }
-    axios.get("http://localhost:6098/loadSchemes", { headers })
+    axios.get("https://ngo-server-1.herokuapp.com/loadSchemes", { headers })
       .then(response => setSchemesInfo(response.data))
       .catch(e => console.log(e))
   }, [])

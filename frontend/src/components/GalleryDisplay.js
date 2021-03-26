@@ -29,7 +29,7 @@ function GalleryDisplay({ element, albumPhotos }) {
             setAlbum(albumPhotos)
 
         } else {
-            const BASE_URL = 'http://localhost:6098'
+            const BASE_URL = 'https://ngo-server-1.herokuapp.com'
             axios.get(`${BASE_URL}/gallery/${albumId}`)
                 .then(function (response) {
                     console.log(response.data)
